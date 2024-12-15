@@ -18,8 +18,8 @@ Users should be able to:
 
 ### Links
 
-- Live Site URL: [View Live Project](#)
-- Solution URL: [Frontend Mentor Solution](#)
+- Live Site URL: [View Live Project](https://fourcardsolutionfrontendmentor.netlify.app/)
+-
 
 ## My Process
 
