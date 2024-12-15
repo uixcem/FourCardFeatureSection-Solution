@@ -1,0 +1,109 @@
+@use "variable" as *;
+@use "boxes" as *;
+@use "mixins" as *;
+
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+
+html {
+  font-size: $font-size;
+}
+
+body {
+  overflow: hidden;
+  min-height: 100vh;
+  margin-top: $spacing-5;
+  @include flex(column, start, center);
+  padding: $spacing-2;
+  font-family: $font-primary;
+  gap: $spacing-2;
+  @include mobile {
+    overflow: auto;
+    overflow-x: hidden;
+    padding: $spacing-2;
+    width: 100%;
+  }
+}
+
+header {
+  text-align: center;
+  min-width: 40rem;
+  @include mobile {
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    width: 100%;
+  }
+
+  h1 {
+    @include typography(2rem, 200, $color-grayish-blue);
+    @include mobile {
+      font-size: 1.5rem;
+    }
+  }
+  h2 {
+    @include typography(2rem, 600, $color-very-dark-blue);
+    @include mobile {
+      font-size: 1.5rem;
+      width: 60%;
+    }
+  }
+  p {
+    @include typography(1rem, 300, $color-grayish-blue);
+    margin-top: $spacing-1;
+    @include mobile {
+      font-size: 0.8rem;
+      width: 20rem;
+    }
+  }
+}
+
+//Grid settings
+
+main {
+  display: grid;
+  grid-template-columns: repeat(3, 1fr);
+  grid-template-rows: repeat(2, 1fr);
+  gap: 2rem;
+  max-width: 1200px;
+  width: 100%;
+  padding: 2rem;
+  grid-template-areas:
+    "left top right"
+    "left bottom right";
+
+  @include mobile {
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+  }
+}
+
+.card {
+  width: 100%;
+}
+
+.cyan {
+  grid-area: left;
+  align-self: center;
+  justify-self: end;
+}
+
+.red {
+  grid-area: top;
+}
+
+.orange {
+  grid-area: bottom;
+}
+
+.blue {
+  grid-area: right;
+  align-self: center;
+  justify-self: start;
+}

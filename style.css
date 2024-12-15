@@ -1,0 +1,181 @@
+@import url("https://fonts.googleapis.com/css2?family=Poppins:ital,wght@0,100;0,200;0,300;0,400;0,500;0,600;0,700;0,800;0,900;1,100;1,200;1,300;1,400;1,500;1,600;1,700;1,800;1,900&display=swap");
+.card {
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: start;
+  gap: 0.5rem;
+  width: 65%;
+  padding: 2rem;
+  border: 1px solid hsl(229, 6%, 66%);
+  border-radius: 0.5rem;
+  box-shadow: 0 4px 4px -2px rgba(84.252, 157.9368, 242.148, 0.5);
+}
+@media screen and (max-width: 480px) {
+  .card {
+    width: 100%;
+  }
+}
+.card h3 {
+  font-size: 1.5rem;
+  font-weight: 600;
+  color: hsl(234, 12%, 34%);
+}
+@media screen and (max-width: 480px) {
+  .card h3 {
+    font-size: 1.2rem;
+  }
+}
+.card p {
+  font-size: 1rem;
+  font-weight: 300;
+  color: hsl(229, 6%, 66%);
+}
+@media screen and (max-width: 480px) {
+  .card p {
+    font-size: 0.8rem;
+  }
+}
+.card img {
+  align-self: self-end;
+  margin-top: 2rem;
+}
+
+.red {
+  border-top: 4px solid hsl(0, 78%, 62%);
+}
+
+.orange {
+  border-top: 4px solid hsl(34, 97%, 64%);
+}
+
+.blue {
+  border-top: 4px solid hsl(212, 86%, 64%);
+}
+
+.cyan {
+  border-top: 4px solid hsl(180, 62%, 55%);
+}
+
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+
+html {
+  font-size: 15px;
+}
+
+body {
+  overflow: hidden;
+  min-height: 100vh;
+  margin-top: 5rem;
+  display: flex;
+  flex-direction: column;
+  justify-content: start;
+  align-items: center;
+  padding: 2rem;
+  font-family: "Poppins", sans-serif;
+  gap: 2rem;
+}
+@media screen and (max-width: 480px) {
+  body {
+    overflow: auto;
+    overflow-x: hidden;
+    padding: 2rem;
+    width: 100%;
+  }
+}
+
+header {
+  text-align: center;
+  min-width: 40rem;
+}
+@media screen and (max-width: 480px) {
+  header {
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    width: 100%;
+  }
+}
+header h1 {
+  font-size: 2rem;
+  font-weight: 200;
+  color: hsl(229, 6%, 66%);
+}
+@media screen and (max-width: 480px) {
+  header h1 {
+    font-size: 1.5rem;
+  }
+}
+header h2 {
+  font-size: 2rem;
+  font-weight: 600;
+  color: hsl(234, 12%, 34%);
+}
+@media screen and (max-width: 480px) {
+  header h2 {
+    font-size: 1.5rem;
+    width: 60%;
+  }
+}
+header p {
+  font-size: 1rem;
+  font-weight: 300;
+  color: hsl(229, 6%, 66%);
+  margin-top: 1rem;
+}
+@media screen and (max-width: 480px) {
+  header p {
+    font-size: 0.8rem;
+    width: 20rem;
+  }
+}
+
+main {
+  display: grid;
+  grid-template-columns: repeat(3, 1fr);
+  grid-template-rows: repeat(2, 1fr);
+  gap: 2rem;
+  max-width: 1200px;
+  width: 100%;
+  padding: 2rem;
+  grid-template-areas: "left top right" "left bottom right";
+}
+@media screen and (max-width: 480px) {
+  main {
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+  }
+}
+
+.card {
+  width: 100%;
+}
+
+.cyan {
+  grid-area: left;
+  align-self: center;
+  justify-self: end;
+}
+
+.red {
+  grid-area: top;
+}
+
+.orange {
+  grid-area: bottom;
+}
+
+.blue {
+  grid-area: right;
+  align-self: center;
+  justify-self: start;
+}
+
+/*# sourceMappingURL=style.css.map */
