@@ -16,10 +16,9 @@ Users should be able to:
 
 ![](./design/desktop-design.jpg)
 
-### Links
+### Link
 
 - Live Site URL: [View Live Project](https://fourcardsolutionfrontendmentor.netlify.app/)
--
 
 ## My Process
 
